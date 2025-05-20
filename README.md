@@ -41,6 +41,7 @@ A full-stack web application to manage hostel outing requests with role-based ac
    npm install
    
 3.Create a .env file with the following environment variables (example):
+
   PORT=5000
   DB_URI=your_database_connection_string
   JWT_SECRET=your_jwt_secret_key
@@ -61,7 +62,7 @@ A full-stack web application to manage hostel outing requests with role-based ac
  3.Start the React development server:
    npm start
 
- 4. Open your browser and go to http://localhost:3000
+4. Open your browser and go to http://localhost:3000
 
 ---
 
