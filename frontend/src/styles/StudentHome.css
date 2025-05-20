@@ -1,0 +1,79 @@
+/* Container setup */
+.student-home {
+    min-height: 100vh;
+    padding: 30px;
+    background: /*linear-gradient(to right, #dbeafe, #e9d5ff)*/ lightgrey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header section */
+  .student-home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .welcome-text {
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .logout-button {
+    background-color: #ef4444;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Main content box */
+  .student-home-content {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  /* Radio buttons */
+  .student-home-content label {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    transform: scale(1.05);
+    background-color: #1d4ed8;
+  }
+  

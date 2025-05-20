@@ -1,0 +1,107 @@
+/* Full viewport bg, subtle gradient */
+.history-container {
+    min-height: 100vh;
+    padding: 24px;
+    background: /*linear-gradient(145deg, #f0f5ff 0%, #e8dfff 100%);*/ lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Centered card */
+  .history-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-title {
+    font-size: 1.75rem;
+    color: black;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  /* Filter form */
+  .history-filter {
+    display: grid;
+    /*grid-template-columns: 1fr 1fr auto;*/
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-group label {
+    margin-bottom: 6px;
+    color: #555555;
+  }
+  
+  .history-filter input {
+    padding: 8px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .filter-btn {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    
+
+  }
+  
+  .filter-btn:hover {
+    background: #357ab8;
+  }
+  
+  /* History list */
+  .history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .history-item {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item-info p {
+    margin: 4px 0;
+    color: #333333;
+  }
+  
+  .qr-section {
+    text-align: center;
+  }
+  
+  .qr-section p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #2e7d32;
+  }
+  
+  .no-data {
+    text-align: center;
+    color: #888888;
+    margin-top: 16px;
+  }
