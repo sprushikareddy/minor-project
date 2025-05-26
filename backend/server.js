@@ -29,10 +29,16 @@ connectDB()
 
 
   // backend/server.js
+  const express = require("express");
+const path = require("path");
+const app = express();
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const app = require('./app');  // ✅ Import from app.js
 app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
 dotenv.config();
 
