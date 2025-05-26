@@ -32,6 +32,7 @@ connectDB()
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const app = require('./app');  // ✅ Import from app.js
+app.use(express.static(path.join(__dirname, "public")));
 
 dotenv.config();
 

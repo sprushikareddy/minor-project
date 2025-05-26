@@ -50,12 +50,7 @@ exports.createOutpassRequest = async (req, res) => {
 };
 
 exports.getMyOutpasses = async (req, res) => {
-    /*try {
-      const records = await OutpassRequest.find({ studentId: req.user.id });
-      res.json(records);
-    } catch (err) {
-      res.status(500).json({ message: err.message });
-    }*/
+    
       try {
         console.log("req.user is:", req.user);
 
@@ -125,41 +120,7 @@ exports.wardenApprove = async (req, res) => {
 };
 
 exports.getPendingForParent = async (req, res) => {
-    /*
-    try {
-      const parentRollno = req.user.rollno;
-  
-      // Find the student associated with this parent's roll number
-      const student = await User.findOne({ rollno: parentRollno, role: 'student' });
-  
-      if (!student) {
-        return res.status(404).json({ message: 'No student found for this roll number' });
-      }
-  
-      // Fetch all pending outpasses for that student
-      const pendingRequests = await Outpass.find({
-        student: student._id,
-        status: 'Pending',
-      }).populate('student', 'name rollno');
-  
-      res.json(pendingRequests);
-    } catch (error) {
-      console.error('Error fetching parent pending requests:', error);
-      res.status(500).json({ message: 'Server error' });
-    }*/
-
-      /*try {
-        const parentRollno = req.user.rollno;
-        console.log("🔍 Parent is checking for rollno:", parentRollno);
     
-        const pending = await Outpass.find({ rollno: parentRollno, status: 'Pending' });
-    
-        console.log("📦 Pending for parent:", pending);
-        res.json(pending);
-      } catch (error) {
-        console.error('❌ Error fetching pending outpasses for parent:', error);
-        res.status(500).json({ message: 'Server error fetching parent outpasses' });
-      }*/
 
         try {
             const rollno = req.user.rollno;
@@ -209,52 +170,7 @@ exports.getPendingForParent = async (req, res) => {
   
 
   exports.getPendingForWarden  = async (req, res) => {
-    /*try {
-      const outpassId = req.params.id;
-  
-      const updatedOutpass = await Outpass.findByIdAndUpdate(
-        outpassId,
-        { status: 'Approved' }, // ✅ change status
-        { new: true }
-      );
-  
-      if (!updatedOutpass) {
-        return res.status(404).json({ message: 'Outpass not found' });
-      }
-  
-      res.json({ message: 'Outpass approved by warden', outpass: updatedOutpass });
-    } catch (error) {
-      console.error('Warden approval error:', error);
-      res.status(500).json({ message: 'Server error during warden approval' });
-    }*/
-   // GET all outpasses pending warden approval
-/*exports.getPendingForWarden = async (req, res) => {
-    try {
-      const pending = await Outpass.find({
-        parentApproved: true,
-        wardenApproved: false,
-      }).populate('studentId', 'name rollno');
-  
-      res.json(pending);
-    } catch (error) {
-      console.error('Error fetching outpasses for warden:', error);
-      res.status(500).json({ message: 'Server error while fetching pending requests' });
-    }
-  };*/
-
- // exports.getPendingForWarden = async (req, res) => {
-    /*try {
-      console.log("👮 Warden fetching pending approvals");
-  
-      const pending = await Outpass.find({ status: 'Pending', parentApproved: true }).populate('studentId', 'name rollno');
-  
-      console.log("📦 Found for warden:", pending);
-      res.status(200).json(pending);
-    } catch (error) {
-      console.error("❌ Error fetching for warden:", error);
-      res.status(500).json({ message: 'Error fetching pending outpasses for warden' });
-    }
-  //};*/
+    
 
   try {
     const pending = await Outpass.find({
